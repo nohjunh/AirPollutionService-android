@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/previewFragment1"
-        android:name="com.nohjunh.airpollutionservice.view.previewFragment1"
+        android:name="com.nohjunh.airpollutionservice.view.PreviewFragment1"
         android:label="fragment_preview1"
         tools:layout="@layout/fragment_preview1" >
         <action
@@ -17,7 +17,7 @@
 
     <fragment
         android:id="@+id/previewFragment2"
-        android:name="com.nohjunh.airpollutionservice.view.previewFragment2"
+        android:name="com.nohjunh.airpollutionservice.view.PreviewFragment2"
         android:label="fragment_preview2"
         tools:layout="@layout/fragment_preview2" />
 </navigation>

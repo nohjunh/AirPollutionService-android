@@ -61,4 +61,10 @@ dependencies {
     implementation("io.coil-kt:coil-gif:2.2.2")
     implementation("io.coil-kt:coil-compose:2.2.2")
 
+    // sliding Up panel
+    implementation 'com.sothree.slidinguppanel:library:3.4.0'
+
+    // Coroutine
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1'
 }

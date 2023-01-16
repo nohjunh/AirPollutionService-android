@@ -2,21 +2,21 @@ package com.nohjunh.airpollutionservice.view
 
 import android.os.Build.VERSION.SDK_INT
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import coil.Coil
 import coil.ImageLoader
 import coil.decode.GifDecoder
 import coil.decode.ImageDecoderDecoder
 import coil.load
-import coil.transform.CircleCropTransformation
 import com.nohjunh.airpollutionservice.R
 import com.nohjunh.airpollutionservice.databinding.FragmentPreview1Binding
+import kotlinx.coroutines.*
 
-
-class previewFragment1 : Fragment() {
+class PreviewFragment1 : Fragment() {
 
     private var _binding : FragmentPreview1Binding? = null
     private val binding get() = _binding!!
@@ -38,7 +38,7 @@ class previewFragment1 : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // coil GIF 확장 라이브러리
+        ///////// coil GIF 확장 라이브러리 /////////////
         val imageLoader = context?.let {
             ImageLoader.Builder(it)
                 .components {
@@ -56,5 +56,12 @@ class previewFragment1 : Fragment() {
         binding.menuImg.load(R.drawable.upmenu) {
             crossfade(true) // fade in 애니메이션
         }
+        ///////////////////////////////////////////
+
+        CoroutineScope(Dispatchers.Main).launch {
+            delay(3000)
+            Navigation.findNavController(view).navigate(R.id.action_previewFragment1_to_previewFragment2)
+        }
+
     }
 }
