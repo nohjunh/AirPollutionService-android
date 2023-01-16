@@ -22,11 +22,38 @@
         tools:context=".view.PreviewFragment1">
 
         <TextView
+            android:id="@+id/Step1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Step1"
+            android:textColor="@color/subColor"
+            android:textSize="15dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginLeft="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/Step2"
+            app:layout_constraintTop_toTopOf="parent">
+        </TextView>
+        <TextView
+            android:id="@+id/Step2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Step2"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="35dp"
+            android:layout_marginRight="30dp"
+            app:layout_constraintStart_toEndOf="@id/Step1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+        </TextView>
+        <TextView
             android:id="@+id/Text1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="지속되는 미세먼지로 인한 피해,"
+            android:text="짜증나는 미세먼지,"
             android:textSize="20dp"
             android:fontFamily="@font/gmarket_sans_ttf_medium"
             android:textColor="@color/black"
@@ -106,7 +133,7 @@
                 android:id="@+id/region"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="선호지역 선택하기"
+                android:text="관심지역 선택하기"
                 android:textSize="30dp"
                 android:layout_marginTop="20dp"
                 android:textColor="@color/subColor"

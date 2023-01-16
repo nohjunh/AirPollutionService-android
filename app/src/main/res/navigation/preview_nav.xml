@@ -19,5 +19,10 @@
         android:id="@+id/previewFragment2"
         android:name="com.nohjunh.airpollutionservice.view.PreviewFragment2"
         android:label="fragment_preview2"
-        tools:layout="@layout/fragment_preview2" />
+        tools:layout="@layout/fragment_preview2">
+        <action
+            android:id="@+id/action_previewFragment2_to_previewFragment1"
+            app:destination="@id/previewFragment1" />
+    </fragment>
+
 </navigation>

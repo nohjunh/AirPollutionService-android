@@ -62,6 +62,5 @@ class PreviewFragment1 : Fragment() {
             delay(3000)
             Navigation.findNavController(view).navigate(R.id.action_previewFragment1_to_previewFragment2)
         }
-
     }
 }

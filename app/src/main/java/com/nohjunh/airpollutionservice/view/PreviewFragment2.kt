@@ -61,5 +61,10 @@ class PreviewFragment2 : Fragment() {
             crossfade(true) // fade in 애니메이션
         }
         ///////////////////////////////////////////
+
+        binding.review.setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_previewFragment2_to_previewFragment1)
+        }
+
     }
 }
