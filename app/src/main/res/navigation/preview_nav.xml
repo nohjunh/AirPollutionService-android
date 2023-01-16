@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/preview_nav"
+    app:startDestination="@id/previewFragment1">
+
+    <fragment
+        android:id="@+id/previewFragment1"
+        android:name="com.nohjunh.airpollutionservice.view.previewFragment1"
+        android:label="fragment_preview1"
+        tools:layout="@layout/fragment_preview1" >
+        <action
+            android:id="@+id/action_previewFragment1_to_previewFragment2"
+            app:destination="@id/previewFragment2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/previewFragment2"
+        android:name="com.nohjunh.airpollutionservice.view.previewFragment2"
+        android:label="fragment_preview2"
+        tools:layout="@layout/fragment_preview2" />
+</navigation>

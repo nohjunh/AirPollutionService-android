@@ -2,8 +2,8 @@
     <!-- Base application theme. -->
     <style name="Theme.Airpollutionservice" parent="Theme.AppCompat.Light">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/mainColor</item>
-        <item name="colorPrimaryVariant">@color/mainColor</item>
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryVariant">@color/white</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
@@ -18,7 +18,8 @@
     <style name="Theme.Airpollutionservice.Splash" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/subColor</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/splashimg</item>
-        <item name="windowSplashScreenAnimationDuration">2000</item>
+        <item name="windowSplashScreenAnimationDuration">5000</item>
         <item name="postSplashScreenTheme">@style/Theme.Airpollutionservice</item>
     </style>
+
 </resources>
