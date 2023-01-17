@@ -1,5 +1,6 @@
 package com.nohjunh.airpollutionservice.view
 
+import android.content.Intent
 import android.os.Build.VERSION.SDK_INT
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -61,6 +62,11 @@ class PreviewFragment1 : Fragment() {
         CoroutineScope(Dispatchers.Main).launch {
             delay(3000)
             Navigation.findNavController(view).navigate(R.id.action_previewFragment1_to_previewFragment2)
+        }
+
+        binding.region.setOnClickListener {
+            val intent = Intent(requireContext(), RegionActivity::class.java)
+            startActivity(intent)
         }
     }
 }

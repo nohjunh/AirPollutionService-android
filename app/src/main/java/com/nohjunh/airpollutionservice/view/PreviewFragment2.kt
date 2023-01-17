@@ -1,5 +1,6 @@
 package com.nohjunh.airpollutionservice.view
 
+import android.content.Intent
 import android.os.Build.VERSION.SDK_INT
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -41,7 +42,6 @@ class PreviewFragment2 : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
         ///////// coil GIF 확장 라이브러리 /////////////
         val imageLoader = context?.let {
             ImageLoader.Builder(it)
@@ -64,6 +64,11 @@ class PreviewFragment2 : Fragment() {
 
         binding.review.setOnClickListener {
             Navigation.findNavController(view).navigate(R.id.action_previewFragment2_to_previewFragment1)
+        }
+
+        binding.region.setOnClickListener {
+            val intent = Intent(requireContext(), RegionActivity::class.java)
+            startActivity(intent)
         }
 
     }
