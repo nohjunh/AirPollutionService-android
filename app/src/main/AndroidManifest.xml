@@ -21,7 +21,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".view.PreviewActivity"
+            android:name=".view.preview.PreviewActivity"
             android:exported="true"
             android:theme="@style/Theme.Airpollutionservice.Splash">
             <meta-data

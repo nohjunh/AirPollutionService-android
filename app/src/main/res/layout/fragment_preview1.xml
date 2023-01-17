@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.PreviewActivity"
+    tools:context=".view.preview.PreviewActivity"
     android:gravity="bottom"
     app:umanoDragView="@id/dragView"
     app:umanoPanelHeight="70dp"
@@ -19,7 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
-        tools:context=".view.PreviewFragment1">
+        tools:context=".view.preview.PreviewFragment1">
 
         <TextView
             android:id="@+id/Step1"

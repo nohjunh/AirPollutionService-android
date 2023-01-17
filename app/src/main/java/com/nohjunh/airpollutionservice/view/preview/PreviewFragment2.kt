@@ -1,4 +1,4 @@
-package com.nohjunh.airpollutionservice.view
+package com.nohjunh.airpollutionservice.view.preview
 
 import android.content.Intent
 import android.os.Build.VERSION.SDK_INT
@@ -15,10 +15,7 @@ import coil.decode.ImageDecoderDecoder
 import coil.load
 import com.nohjunh.airpollutionservice.R
 import com.nohjunh.airpollutionservice.databinding.FragmentPreview2Binding
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
+import com.nohjunh.airpollutionservice.view.RegionActivity
 
 class PreviewFragment2 : Fragment() {
 
