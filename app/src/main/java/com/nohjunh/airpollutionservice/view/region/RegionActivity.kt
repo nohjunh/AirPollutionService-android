@@ -30,7 +30,6 @@ class RegionActivity : AppCompatActivity() {
         binding.regionRV.layoutManager = LinearLayoutManager(this)
 
 
-        //
         viewModelTest.getAirPollutionDataList()
     }
 }

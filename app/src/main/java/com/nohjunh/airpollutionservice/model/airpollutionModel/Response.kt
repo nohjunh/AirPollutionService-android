@@ -4,6 +4,8 @@ package com.nohjunh.airpollutionservice.model.airpollutionModel
 import com.google.gson.annotations.SerializedName
 
 data class Response(
-    val body: Body,
-    val header: Header
+    @SerializedName("body")
+    val body: Body?,
+    @SerializedName("header")
+    val header: Header?
 )
