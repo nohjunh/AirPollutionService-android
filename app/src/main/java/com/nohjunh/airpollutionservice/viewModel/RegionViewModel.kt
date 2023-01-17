@@ -29,6 +29,5 @@ class RegionViewModel : ViewModel() {
         cityList.add("경상남도")
         cityList.add("제주특별자치도")
         cityList.add("세종특별자치시")
-
     }
 }

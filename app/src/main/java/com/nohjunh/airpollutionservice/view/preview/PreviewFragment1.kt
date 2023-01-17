@@ -15,7 +15,7 @@ import coil.decode.ImageDecoderDecoder
 import coil.load
 import com.nohjunh.airpollutionservice.R
 import com.nohjunh.airpollutionservice.databinding.FragmentPreview1Binding
-import com.nohjunh.airpollutionservice.view.RegionActivity
+import com.nohjunh.airpollutionservice.view.region.RegionActivity
 import kotlinx.coroutines.*
 
 class PreviewFragment1 : Fragment() {

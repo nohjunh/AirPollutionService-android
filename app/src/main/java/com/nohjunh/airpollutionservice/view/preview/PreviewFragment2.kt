@@ -15,7 +15,7 @@ import coil.decode.ImageDecoderDecoder
 import coil.load
 import com.nohjunh.airpollutionservice.R
 import com.nohjunh.airpollutionservice.databinding.FragmentPreview2Binding
-import com.nohjunh.airpollutionservice.view.RegionActivity
+import com.nohjunh.airpollutionservice.view.region.RegionActivity
 
 class PreviewFragment2 : Fragment() {
 

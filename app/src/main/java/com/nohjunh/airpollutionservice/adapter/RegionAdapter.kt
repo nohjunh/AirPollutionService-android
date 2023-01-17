@@ -1,4 +1,4 @@
-package com.nohjunh.airpollutionservice
+package com.nohjunh.airpollutionservice.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.nohjunh.airpollutionservice.R
 
 class RegionAdapter(val context: Context, val dataSet: ArrayList<String>) :
     RecyclerView.Adapter<RegionAdapter.ViewHolder>() {
