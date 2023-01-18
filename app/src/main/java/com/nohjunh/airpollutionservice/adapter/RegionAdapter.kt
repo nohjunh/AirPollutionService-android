@@ -47,4 +47,8 @@ class RegionAdapter(val context: Context, val regionSet: ArrayList<String>) :
     override fun getItemCount(): Int {
         return regionSet.size
     }
+
+    override fun getItemViewType(position: Int): Int {
+        return position
+    }
 }
