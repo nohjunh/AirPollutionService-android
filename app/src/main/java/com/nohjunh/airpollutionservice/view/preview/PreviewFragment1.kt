@@ -61,7 +61,7 @@ class PreviewFragment1 : Fragment() {
         ///////////////////////////////////////////
 
         CoroutineScope(Dispatchers.Main).launch {
-            delay(2000)
+            delay(5000)
             Navigation.findNavController(view).navigate(R.id.action_previewFragment1_to_previewFragment2)
         }
 

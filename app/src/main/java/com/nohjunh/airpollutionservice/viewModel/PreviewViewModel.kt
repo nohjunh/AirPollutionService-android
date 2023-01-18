@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.nohjunh.airpollutionservice.dataStore.FlagDataStore
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import timber.log.Timber
 
@@ -15,6 +16,9 @@ class PreviewViewModel : ViewModel() {
         get() = _flag
 
     fun flagDataAccessCheck() = viewModelScope.launch {
+        // lottie aniView delay
+        delay(3000)
+
         val flagData = FlagDataStore().getFlagData()
         _flag.value = flagData
 
@@ -25,4 +29,5 @@ class PreviewViewModel : ViewModel() {
             Timber.tag("flagData").e("firstAccess")
         }
     }
+
 }

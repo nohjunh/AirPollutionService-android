@@ -35,6 +35,7 @@ class PreviewActivity : AppCompatActivity() {
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
             } else {
+                binding.LottieView.visibility = View.INVISIBLE
                 // Preview Activity가 보이도록 설정
                 binding.fragmentContainerView.visibility = View.VISIBLE
             }
