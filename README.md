@@ -11,5 +11,7 @@
 - Retrofit
 - Navigation
 - Coroutine
+- Room
+- Flow
 - AndroidSlidingUpPanel : https://github.com/umano/AndroidSlidingUpPanel
 - DataStore
