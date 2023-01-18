@@ -1,7 +1,8 @@
-package com.nohjunh.airpollutionservice
+package com.nohjunh.airpollutionservice.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.nohjunh.airpollutionservice.R
 import timber.log.Timber
 
 class MainActivity : AppCompatActivity() {

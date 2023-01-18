@@ -2,6 +2,7 @@ package com.nohjunh.airpollutionservice.viewModel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.nohjunh.airpollutionservice.dataStore.FlagDataStore
 import kotlinx.coroutines.launch
 
 class RegionViewModel : ViewModel() {
@@ -29,5 +30,10 @@ class RegionViewModel : ViewModel() {
         cityList.add("경상남도")
         cityList.add("제주특별자치도")
         cityList.add("세종특별자치시")
+    }
+
+    // 처음 앱을 구동시켰는지 여부를 판단하기 위한 메소드
+    fun setFlagData() = viewModelScope.launch {
+        FlagDataStore().setFlagData()
     }
 }
