@@ -15,7 +15,6 @@ class RegionActivity : AppCompatActivity() {
     private lateinit var binding : ActivityRegionBinding
 
     private val viewModel : RegionViewModel by viewModels()
-    private val viewModelTest : AirPollutionViewModel by viewModels()
 
     private lateinit var regionRVAdapter : RegionAdapter
 
@@ -30,6 +29,5 @@ class RegionActivity : AppCompatActivity() {
         binding.regionRV.layoutManager = LinearLayoutManager(this)
 
 
-        viewModelTest.getAirPollutionDataList()
     }
 }

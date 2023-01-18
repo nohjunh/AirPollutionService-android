@@ -1,9 +1,11 @@
 package com.nohjunh.airpollutionservice.model.airpollutionModel
 
+data class AirPollutionDataList (
 
-import com.google.gson.annotations.SerializedName
-
-data class AirPollutionDataList(
-    @SerializedName("response")
-    val response: Response?
+    val sidoName: String,
+    val stationName : String,
+    val pm10Grade : String,
+    val pm10Value: Int,
+    val pm25Grade : String,
+    val pm25Value : Int
 )
