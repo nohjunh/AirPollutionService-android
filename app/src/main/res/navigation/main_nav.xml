@@ -3,16 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_nav"
-    app:startDestination="@id/cityListFragment">
+    app:startDestination="@id/showAirDataFragment">
+
+    <fragment
+        android:id="@+id/showAirDataFragment"
+        android:name="com.nohjunh.airpollutionservice.view.main.ShowAirDataFragment"
+        android:label="fragment_show_air_data"
+        tools:layout="@layout/fragment_show_air_data" />
 
     <fragment
         android:id="@+id/cityListFragment"
         android:name="com.nohjunh.airpollutionservice.view.main.CityListFragment"
         android:label="fragment_city_list"
         tools:layout="@layout/fragment_city_list" />
-    <fragment
-        android:id="@+id/showAirDataFragment"
-        android:name="com.nohjunh.airpollutionservice.view.main.ShowAirDataFragment"
-        android:label="fragment_show_air_data"
-        tools:layout="@layout/fragment_show_air_data" />
 </navigation>
