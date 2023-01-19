@@ -12,7 +12,7 @@ interface APIs {
     suspend fun getAirPollutionData(
         @Query("serviceKey") ServiceKey:String = BuildConfig.APIKEY_AirPollution,
         @Query("returnType") ReturnType:String = "json",
-        @Query("numOfRows") NumOfRows:Int = 50,
+        @Query("numOfRows") NumOfRows:Int = 15,
         @Query("pageNo") PageNo:Int = 1,
         @Query("sidoName") SidoName:String,
         @Query("ver") Ver:String = "1.0"

@@ -13,5 +13,6 @@
 - Coroutine
 - Room
 - Flow
+- LiveData
 - AndroidSlidingUpPanel : https://github.com/umano/AndroidSlidingUpPanel
 - DataStore

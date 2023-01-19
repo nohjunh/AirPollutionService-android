@@ -5,13 +5,29 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.viewModels
+import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.nohjunh.airpollutionservice.R
-
+import com.nohjunh.airpollutionservice.adapter.RegionAdapter
+import com.nohjunh.airpollutionservice.adapter.ShowAirDataRVAdapter
+import com.nohjunh.airpollutionservice.database.entity.CityAirPollutionEntity
+import com.nohjunh.airpollutionservice.databinding.ActivityRegionBinding
+import com.nohjunh.airpollutionservice.databinding.FragmentShowAirDataBinding
+import com.nohjunh.airpollutionservice.viewModel.AirPollutionViewModel
+import com.nohjunh.airpollutionservice.viewModel.MainViewModel
+import com.nohjunh.airpollutionservice.viewModel.RegionViewModel
+import timber.log.Timber
 
 class ShowAirDataFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+
+    private var _binding : FragmentShowAirDataBinding? = null
+    private val binding get() = _binding!!
+
+    private val viewModel : MainViewModel by activityViewModels()
+
+    private val selectedCityList = ArrayList<CityAirPollutionEntity>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,7 +38,37 @@ class ShowAirDataFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_show_air_data, container, false)
+        _binding = FragmentShowAirDataBinding.inflate(inflater, container, false)
+        val view = binding.root
+        return view
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        viewModel.getCityAirPollutionData()
+        viewModel.selectedCityAirList.observe(viewLifecycleOwner, Observer {
+
+            selectedCityList.clear()
+
+            for (city in it) {
+                selectedCityList.add(city)
+            }
+
+            setSelectedCityListRV()
+        })
+
+    }
+
+    private fun setSelectedCityListRV() {
+        val selectedRVAdapter = ShowAirDataRVAdapter(requireContext(), selectedCityList)
+        binding.selectedCityRV.adapter = selectedRVAdapter
+        binding.selectedCityRV.layoutManager = LinearLayoutManager(requireContext())
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
     }
 
 }

@@ -19,7 +19,8 @@ class AirPollutionViewModel : ViewModel() {
     private val netWorkRepository = NetWorkRepository()
     private val dataBaseRepository = DataBaseRepository()
 
-    private lateinit var airPollutionDataList : ArrayList<AirPollutionDataList>
+    lateinit var airPollutionDataList : ArrayList<AirPollutionDataList>
+    lateinit var airPollutionCheckList : ArrayList<String>
 
     // LiveData -> 실시간 데이터 observe
     private val _airPollutionLiveData = MutableLiveData<List<AirPollutionDataList>>()
@@ -31,8 +32,10 @@ class AirPollutionViewModel : ViewModel() {
     val save : LiveData<String>
         get() = _saved
 
-    fun getAirPollutionDataList(checksStarRegionList: ArrayList<String>) = viewModelScope.launch {
+    private var finish = false
 
+    fun getAirPollutionDataList(checksStarRegionList: ArrayList<String>) = viewModelScope.launch {
+        airPollutionCheckList = ArrayList()
         airPollutionDataList = ArrayList()
 
         for (sidoName in checksStarRegionList) {
@@ -66,20 +69,22 @@ class AirPollutionViewModel : ViewModel() {
                         Integer.parseInt(data.pm25Value)
                     )
                     airPollutionDataList.add(tempData)
+                    airPollutionCheckList.add(sidoName)
 
                 } catch (e: java.lang.Exception) { Timber.d("getAirPollutionDataList Error")}
             }
         }
-        Timber.tag("CityAirData").e("$airPollutionDataList")
         _airPollutionLiveData.value= airPollutionDataList
+        finish = true
     }
-
 
     // Room DataBase에 선택한 지역리스트 데이터 최신화
     fun saveSelectedCityList(checksStarRegionList: ArrayList<String>) = viewModelScope.launch (Dispatchers.IO) {
+
         getAirPollutionDataList(checksStarRegionList)
 
-        delay(3000)
+        while (!finish) { }
+        finish = false
 
         for (data in airPollutionDataList) {
 

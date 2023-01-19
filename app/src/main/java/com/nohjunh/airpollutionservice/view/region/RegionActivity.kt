@@ -37,7 +37,6 @@ class RegionActivity : AppCompatActivity() {
 
             // AirPollutionViewModel로 선택한 도시 리스트를 보내줌
             airPollutionViewModel.saveSelectedCityList(regionRVAdapter.checksStarRegionList)
-
         }
 
         airPollutionViewModel.save.observe(this, Observer {

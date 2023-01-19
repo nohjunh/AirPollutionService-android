@@ -54,7 +54,7 @@
                 android:id="@+id/pm10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="미세먼지 :"
+                android:text="미세먼지:"
                 android:textColor="@color/black"
                 android:fontFamily="@font/gmarket_sans_ttf_medium"
                 android:layout_marginLeft="20dp"
@@ -68,7 +68,7 @@
                 android:text="좋음"
                 android:src="@drawable/good"
                 android:textColor="@color/black"
-                android:layout_marginLeft="15dp"
+                android:layout_marginLeft="7dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@id/pm10"
                 app:layout_constraintTop_toTopOf="parent"/>
@@ -79,7 +79,7 @@
                 android:text="value"
                 android:textColor="@color/thirdColor"
                 android:fontFamily="@font/gmarket_sans_ttf_medium"
-                android:layout_marginLeft="15dp"
+                android:layout_marginLeft="7dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@id/pm10grade"
                 app:layout_constraintTop_toTopOf="parent"/>
@@ -90,7 +90,7 @@
                 android:text="초미세먼지 :"
                 android:textColor="@color/black"
                 android:fontFamily="@font/gmarket_sans_ttf_medium"
-                android:layout_marginRight="15dp"
+                android:layout_marginRight="7dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/pm25grade"/>
@@ -101,7 +101,7 @@
                 android:text="나쁨"
                 android:src="@drawable/verybad"
                 android:textColor="@color/black"
-                android:layout_marginRight="15dp"
+                android:layout_marginRight="7dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/pm25value"
                 app:layout_constraintTop_toTopOf="parent"/>
