@@ -38,7 +38,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".view.MainActivity"
+            android:name=".view.main.MainActivity"
             android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"

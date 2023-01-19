@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/showAirDataFragment"
+        android:title="대기 현황"
+        android:icon="@drawable/shownav"
+        />
+
+    <item
+        android:id="@+id/cityListFragment"
+        android:title="도시리스트"
+        android:icon="@drawable/skyline"
+        />
+
+</menu>

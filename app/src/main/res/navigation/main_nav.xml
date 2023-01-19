@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/cityListFragment">
+
+    <fragment
+        android:id="@+id/cityListFragment"
+        android:name="com.nohjunh.airpollutionservice.view.main.CityListFragment"
+        android:label="fragment_city_list"
+        tools:layout="@layout/fragment_city_list" />
+    <fragment
+        android:id="@+id/showAirDataFragment"
+        android:name="com.nohjunh.airpollutionservice.view.main.ShowAirDataFragment"
+        android:label="fragment_show_air_data"
+        tools:layout="@layout/fragment_show_air_data" />
+</navigation>

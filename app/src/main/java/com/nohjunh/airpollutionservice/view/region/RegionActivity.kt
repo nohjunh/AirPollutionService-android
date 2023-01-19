@@ -8,10 +8,9 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.nohjunh.airpollutionservice.adapter.RegionAdapter
 import com.nohjunh.airpollutionservice.databinding.ActivityRegionBinding
-import com.nohjunh.airpollutionservice.view.MainActivity
+import com.nohjunh.airpollutionservice.view.main.MainActivity
 import com.nohjunh.airpollutionservice.viewModel.AirPollutionViewModel
 import com.nohjunh.airpollutionservice.viewModel.RegionViewModel
-import timber.log.Timber
 
 class RegionActivity : AppCompatActivity() {
 

@@ -8,7 +8,7 @@ import androidx.activity.viewModels
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.Observer
 import com.nohjunh.airpollutionservice.databinding.ActivityPreviewBinding
-import com.nohjunh.airpollutionservice.view.MainActivity
+import com.nohjunh.airpollutionservice.view.main.MainActivity
 import com.nohjunh.airpollutionservice.viewModel.PreviewViewModel
 import timber.log.Timber
 
