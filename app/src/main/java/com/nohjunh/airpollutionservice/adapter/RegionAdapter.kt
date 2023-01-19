@@ -13,7 +13,7 @@ import com.nohjunh.airpollutionservice.R
 class RegionAdapter(val context: Context, val regionSet: ArrayList<String>) :
     RecyclerView.Adapter<RegionAdapter.ViewHolder>() {
 
-    private val checksStarRegionList = ArrayList<String>()
+    val checksStarRegionList = ArrayList<String>()
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val regionName : TextView = view.findViewById(R.id.regionName)

@@ -3,6 +3,7 @@ package com.nohjunh.airpollutionservice.viewModel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.nohjunh.airpollutionservice.dataStore.FlagDataStore
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class RegionViewModel : ViewModel() {
@@ -12,8 +13,8 @@ class RegionViewModel : ViewModel() {
     fun getCityList() = viewModelScope.launch {
         cityList = ArrayList()
 
-        cityList.add("서울특별시")
-        cityList.add("부산광역시")
+        cityList.add("서울")
+        cityList.add("부산")
         cityList.add("대구광역시")
         cityList.add("인천광역시")
         cityList.add("광주광역시")
@@ -36,4 +37,5 @@ class RegionViewModel : ViewModel() {
     fun setFlagData() = viewModelScope.launch {
         FlagDataStore().setFlagData()
     }
+
 }

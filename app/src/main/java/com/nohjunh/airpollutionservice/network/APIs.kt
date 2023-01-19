@@ -14,7 +14,7 @@ interface APIs {
         @Query("returnType") ReturnType:String = "json",
         @Query("numOfRows") NumOfRows:Int = 50,
         @Query("pageNo") PageNo:Int = 1,
-        @Query("sidoName") SidoName:String = "부산",
+        @Query("sidoName") SidoName:String,
         @Query("ver") Ver:String = "1.0"
     ) : AirPollutionData
 

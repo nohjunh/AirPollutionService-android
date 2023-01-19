@@ -1,12 +1,10 @@
 package com.nohjunh.airpollutionservice.database.dao
 
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
-import androidx.room.Update
+import androidx.room.*
 import com.nohjunh.airpollutionservice.database.entity.CityAirPollutionEntity
 import kotlinx.coroutines.flow.Flow
 
+@Dao
 interface CityAirPollutionDAO {
 
     @Query("SELECT * FROM select_city_table WHERE selected = :selected")

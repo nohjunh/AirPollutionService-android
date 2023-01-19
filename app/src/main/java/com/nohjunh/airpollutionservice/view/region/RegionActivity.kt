@@ -5,18 +5,19 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.nohjunh.airpollutionservice.BuildConfig
 import com.nohjunh.airpollutionservice.adapter.RegionAdapter
 import com.nohjunh.airpollutionservice.databinding.ActivityRegionBinding
 import com.nohjunh.airpollutionservice.view.MainActivity
 import com.nohjunh.airpollutionservice.viewModel.AirPollutionViewModel
 import com.nohjunh.airpollutionservice.viewModel.RegionViewModel
+import timber.log.Timber
 
 class RegionActivity : AppCompatActivity() {
 
     private lateinit var binding : ActivityRegionBinding
 
     private val viewModel : RegionViewModel by viewModels()
+    private val airPollutionViewModel : AirPollutionViewModel by viewModels()
 
     private lateinit var regionRVAdapter : RegionAdapter
 
@@ -33,6 +34,10 @@ class RegionActivity : AppCompatActivity() {
         binding.nextBtn.setOnClickListener {
             // 처음 접속했는지 아닌지 여부 판단
             viewModel.setFlagData()
+
+            // AirPollutionViewModel로 선택한 도시 리스트를 보내줌
+            airPollutionViewModel.saveSelectedCityList(regionRVAdapter.checksStarRegionList)
+
             // 메인 액티비티로 GoGo
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)

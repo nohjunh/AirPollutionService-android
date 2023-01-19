@@ -14,6 +14,5 @@ data class CityAirPollutionEntity (
     val pm10Value: Int,
     val pm25Grade : String,
     val pm25Value : Int,
-    var selected : Boolean
-
+    val selected : Boolean
 )

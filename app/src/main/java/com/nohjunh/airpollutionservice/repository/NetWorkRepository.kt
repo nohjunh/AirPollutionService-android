@@ -10,6 +10,6 @@ class NetWorkRepository {
 
     private val client = RetrofitInstance.getInstance().create(APIs::class.java)
 
-    suspend fun getAirPollutionData() = client.getAirPollutionData()
+    suspend fun getAirPollutionData(sidoName : String) = client.getAirPollutionData(SidoName = sidoName)
 
 }
