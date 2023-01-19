@@ -11,6 +11,7 @@ import com.nohjunh.airpollutionservice.repository.NetWorkRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import timber.log.Timber
 
 class AirPollutionViewModel : ViewModel() {
@@ -24,6 +25,11 @@ class AirPollutionViewModel : ViewModel() {
     private val _airPollutionLiveData = MutableLiveData<List<AirPollutionDataList>>()
     val airPollutionLiveData : LiveData<List<AirPollutionDataList>>
         get() = _airPollutionLiveData
+
+    // Room DB에 공공데이터포털 미세먼지 데이터가 다 저장됐는지 파악하기 위한 LiveData
+    private val _saved = MutableLiveData<String>()
+    val save : LiveData<String>
+        get() = _saved
 
     fun getAirPollutionDataList(checksStarRegionList: ArrayList<String>) = viewModelScope.launch {
 
@@ -93,7 +99,10 @@ class AirPollutionViewModel : ViewModel() {
             cityAirPollutionEntity.let {
                 dataBaseRepository.insertSelectedCityAirPollutionData(it)
             }
+        }
 
+        withContext(Dispatchers.Main) {
+            _saved.value = "pushDataToDBFinish"
         }
 
     }

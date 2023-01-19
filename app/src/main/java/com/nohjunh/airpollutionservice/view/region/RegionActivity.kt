@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
+import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.nohjunh.airpollutionservice.adapter.RegionAdapter
 import com.nohjunh.airpollutionservice.databinding.ActivityRegionBinding
@@ -38,10 +39,15 @@ class RegionActivity : AppCompatActivity() {
             // AirPollutionViewModel로 선택한 도시 리스트를 보내줌
             airPollutionViewModel.saveSelectedCityList(regionRVAdapter.checksStarRegionList)
 
-            // 메인 액티비티로 GoGo
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
         }
+
+        airPollutionViewModel.save.observe(this, Observer {
+            if (it.equals("pushDataToDBFinish")) {
+                // 메인 액티비티로 GoGo
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+           }
+        })
 
     }
 }
