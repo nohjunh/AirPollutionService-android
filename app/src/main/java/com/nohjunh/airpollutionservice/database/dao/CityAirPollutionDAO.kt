@@ -16,4 +16,6 @@ interface CityAirPollutionDAO {
     @Update
     fun update(cityAirPollutionEntity: CityAirPollutionEntity)
 
+    @Query("DELETE FROM select_city_table WHERE sidoName = :sidoName")
+    fun delete(sidoName: String)
 }

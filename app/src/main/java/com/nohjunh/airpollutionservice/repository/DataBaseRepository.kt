@@ -15,4 +15,5 @@ class DataBaseRepository {
 
     fun updateSelectedCityAirPollutionData(cityAirPollutionEntity: CityAirPollutionEntity) = airPollutionDB.cityAirPollutionDAO().update(cityAirPollutionEntity)
 
+    fun deleteSelectedCityAirPollutionData(sidoName : String) = airPollutionDB.cityAirPollutionDAO().delete(sidoName)
 }

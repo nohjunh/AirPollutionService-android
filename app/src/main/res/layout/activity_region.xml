@@ -8,7 +8,6 @@
     android:background="@color/white"
     tools:context=".view.region.RegionActivity">
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/TextArea"
         android:layout_width="match_parent"
@@ -19,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="미세먼지 현황이 궁금한 \n 관심지역을 선택하세요."
-            android:textSize="30dp"
+            android:textSize="25dp"
             android:textColor="@color/subColor"
             android:fontFamily="@font/gmarket_sans_ttf_medium"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -46,11 +45,11 @@
         app:layout_constraintBottom_toBottomOf="parent">
         <ImageView
             android:id="@+id/nextBtn"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
             android:src="@drawable/rightbtn"
             android:background="@color/white"
-            android:layout_marginBottom="25dp"
+            android:layout_marginBottom="20dp"
             android:layout_marginRight="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>

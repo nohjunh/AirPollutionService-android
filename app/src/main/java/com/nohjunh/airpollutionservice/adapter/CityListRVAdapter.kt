@@ -14,6 +14,11 @@ import com.nohjunh.airpollutionservice.database.entity.CityAirPollutionEntity
 class CityListRVAdapter(val context : Context, val dataSet : List<CityAirPollutionEntity>)
     : RecyclerView.Adapter<CityListRVAdapter.ViewHolder>() {
 
+    interface ItemClick {
+        fun onClick(view: View, position: Int)
+    }
+    var itemClick : ItemClick? = null
+
     inner class ViewHolder(view : View) : RecyclerView.ViewHolder(view) {
         val regionName : TextView = view.findViewById(R.id.regionName)
         val starBtn : ImageView = view.findViewById(R.id.starBtn)
@@ -27,6 +32,11 @@ class CityListRVAdapter(val context : Context, val dataSet : List<CityAirPolluti
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+
+        holder.itemView.findViewById<ImageView>(R.id.starBtn).setOnClickListener { view ->
+            itemClick?.onClick(view, position)
+        }
+
         holder.regionName.text = dataSet[position].sidoName
         val selected = dataSet[position].selected
         if(selected) {

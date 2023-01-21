@@ -13,7 +13,6 @@ import com.nohjunh.airpollutionservice.adapter.CityListRVAdapter
 import com.nohjunh.airpollutionservice.database.entity.CityAirPollutionEntity
 import com.nohjunh.airpollutionservice.databinding.FragmentCityListBinding
 import com.nohjunh.airpollutionservice.viewModel.MainViewModel
-import timber.log.Timber
 
 class CityListFragment : Fragment() {
 
@@ -52,7 +51,6 @@ class CityListFragment : Fragment() {
             unSelectedCityList.clear()
 
             for (city in it) {
-                Timber.e("$city")
                 if(temp.contains(city.sidoName)) {
                     continue
                 } else {
@@ -76,10 +74,21 @@ class CityListFragment : Fragment() {
         binding.selectedCityRV.adapter = selectedRVAdapter
         binding.selectedCityRV.layoutManager = LinearLayoutManager(requireContext())
 
+        selectedRVAdapter.itemClick = object : CityListRVAdapter.ItemClick {
+            override fun onClick(view: View, position: Int) {
+                viewModel.deleteSelectedCityListData(selectedCityList[position].sidoName)
+            }
+        }
 
         val unSelectedRVAdapter = CityListRVAdapter(requireContext(), unSelectedCityList)
         binding.unSelectedCityRV.adapter = unSelectedRVAdapter
         binding.unSelectedCityRV.layoutManager = LinearLayoutManager(requireContext())
+
+        unSelectedRVAdapter.itemClick = object : CityListRVAdapter.ItemClick {
+            override fun onClick(view: View, position: Int) {
+                viewModel.insertSelectedCityListData(unSelectedCityList[position].sidoName)
+            }
+        }
     }
 
     override fun onDestroy() {
