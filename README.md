@@ -16,3 +16,4 @@
 - LiveData
 - AndroidSlidingUpPanel : https://github.com/umano/AndroidSlidingUpPanel
 - DataStore
+- ViewPager2

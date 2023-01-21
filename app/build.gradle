@@ -100,4 +100,8 @@ dependencies {
     // Lottie https://search.maven.org/artifact/com.airbnb.android/lottie
     def lottieVer = "5.2.0"
     implementation "com.airbnb.android:lottie:$lottieVer"
+
+    // ViewPager2
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
+
 }
