@@ -80,6 +80,7 @@ class MainViewModel : ViewModel() {
             } catch (e: java.lang.Exception) { Timber.d("getAirPollutionDataList Error")}
         }
     }
+
     fun deleteSelectedCityListData(sidoName: String) = viewModelScope.launch(
         Dispatchers.IO) {
 

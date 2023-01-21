@@ -17,3 +17,4 @@
 - AndroidSlidingUpPanel : https://github.com/umano/AndroidSlidingUpPanel
 - DataStore
 - ViewPager2
+- WorkManager

@@ -47,7 +47,7 @@ class ShowAirDataRVAdapter(val context : Context, val dataSet : List<CityAirPoll
             "나쁨" -> holder.pm25grade.load(R.drawable.bad)
             "매우나쁨" -> holder.pm25grade.load(R.drawable.verybad)
         }
-        holder.pm25value.text = dataSet[position].pm10Value.toString()
+        holder.pm25value.text = dataSet[position].pm25Value.toString()
 
     }
 

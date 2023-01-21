@@ -116,11 +116,11 @@ class CityListFragment : Fragment() {
         }
 
 
-        // 2초마다 페이지 자동 슬라이드
+        // 1.5초마다 페이지 자동 슬라이드
         viewLifecycleOwner.lifecycleScope.launch {
             while (true) {
-                delay(1800)
                 setPage()
+                delay(1500)
             }
         }
 
