@@ -11,5 +11,6 @@
     <color name="mainColor">#F0997D</color>
     <color name="subColor">#FFC3A1</color>
     <color name="thirdColor">#A75D5D</color>
+    <color name="grey">#B2B2B2</color>
 
 </resources>
