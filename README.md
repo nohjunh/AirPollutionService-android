@@ -9,6 +9,7 @@
 - SplashScreen
 - Coil
 - Retrofit
+- Lottie
 - Navigation
 - Coroutine
 - Room
