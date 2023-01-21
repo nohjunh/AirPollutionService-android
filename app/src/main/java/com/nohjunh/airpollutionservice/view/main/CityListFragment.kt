@@ -1,10 +1,14 @@
 package com.nohjunh.airpollutionservice.view.main
 
+import android.app.Activity
 import android.os.Bundle
+import android.view.Gravity
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.lifecycleScope
@@ -18,6 +22,8 @@ import com.nohjunh.airpollutionservice.database.entity.CityAirPollutionEntity
 import com.nohjunh.airpollutionservice.databinding.FragmentCityListBinding
 import com.nohjunh.airpollutionservice.viewModel.MainViewModel
 import kotlinx.coroutines.*
+import www.sanju.motiontoast.MotionToast
+import www.sanju.motiontoast.MotionToastStyle
 import kotlin.coroutines.coroutineContext
 
 class CityListFragment : Fragment() {
@@ -133,8 +139,19 @@ class CityListFragment : Fragment() {
 
         selectedRVAdapter.itemClick = object : CityListRVAdapter.ItemClick {
             override fun onClick(view: View, position: Int) {
+
+                MotionToast.darkToast(
+                    context as Activity,
+                    "삭제",
+                    "관심목록에서 삭제했습니다.",
+                    MotionToastStyle.DELETE,
+                    MotionToast.GRAVITY_BOTTOM,
+                    MotionToast.SHORT_DURATION,
+                    ResourcesCompat.getFont(context as Activity, www.sanju.motiontoast.R.font.helvetica_regular)
+                )
                 viewModel.deleteSelectedCityListData(selectedCityList[position].sidoName)
             }
+
         }
 
         val unSelectedRVAdapter = CityListRVAdapter(requireContext(), unSelectedCityList)
@@ -143,8 +160,19 @@ class CityListFragment : Fragment() {
 
         unSelectedRVAdapter.itemClick = object : CityListRVAdapter.ItemClick {
             override fun onClick(view: View, position: Int) {
+
+                MotionToast.darkToast(
+                    context as Activity,
+                    "추가",
+                    "관심목록에 추가했습니다.",
+                    MotionToastStyle.SUCCESS,
+                    MotionToast.GRAVITY_BOTTOM,
+                    MotionToast.SHORT_DURATION,
+                    ResourcesCompat.getFont(context as Activity, www.sanju.motiontoast.R.font.helvetica_regular)
+                )
                 viewModel.insertSelectedCityListData(unSelectedCityList[position].sidoName)
             }
+
         }
     }
 

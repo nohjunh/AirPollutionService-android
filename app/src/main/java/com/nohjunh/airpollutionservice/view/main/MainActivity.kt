@@ -1,5 +1,6 @@
 package com.nohjunh.airpollutionservice.view.main
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.findNavController
@@ -12,10 +13,15 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding : ActivityMainBinding
 
+    companion object {
+        var toastContext : Context? = null
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         Timber.tag("MainActivity").e("start")
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
+        toastContext = applicationContext
         setContentView(binding.root)
 
         val bottomNavView = binding.bottomNavView

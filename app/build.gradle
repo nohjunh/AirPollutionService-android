@@ -106,4 +106,7 @@ dependencies {
 
     // WorkManager
     implementation "androidx.work:work-runtime-ktx:2.7.1"
+
+    // MotionToast
+    implementation 'com.github.Spikeysanju:MotionToast:1.4'
 }
