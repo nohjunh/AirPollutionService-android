@@ -25,4 +25,6 @@ interface CityAirPollutionDAO {
     @Query("UPDATE select_city_table SET pm10Grade = :pm10Grade, pm10Value = :pm10Value, pm25Grade = :pm25Grade, pm25Value = :pm25Value WHERE sidoName = :sidoName AND stationName = :stationName")
     fun updateAirData(sidoName: String, stationName : String, pm10Grade : String, pm10Value: Int, pm25Grade : String, pm25Value : Int)
 
+    @Query("SELECT * FROM select_city_table")
+    fun getAirPollutionDataList() : List<CityAirPollutionEntity>
 }

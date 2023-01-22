@@ -20,4 +20,6 @@ class DataBaseRepository {
     fun getSelectedCityListData() = airPollutionDB.cityAirPollutionDAO().getCityListData()
 
     fun updateSelectedCityData(sidoName: String, stationName : String, pm10Grade : String, pm10Value: Int, pm25Grade : String, pm25Value : Int) = airPollutionDB.cityAirPollutionDAO().updateAirData(sidoName, stationName, pm10Grade, pm10Value, pm25Grade, pm25Value)
+
+    fun getAirPollutionDataList() = airPollutionDB.cityAirPollutionDAO().getAirPollutionDataList()
 }

@@ -4,9 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="80dp"
-    tools:context=".foreground.ForeGroundActivity">
-
+    android:layout_height="match_parent"
+    tools:context=".foreground.view.ForeGroundActivity">
 
     <TextView
         android:id="@+id/mainText"
@@ -21,8 +20,7 @@
         android:layout_marginLeft="25dp"
         android:layout_marginTop="35dp"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintStart_toStartOf="parent">
     </TextView>
     <TextView
         android:id="@+id/subText"
@@ -43,9 +41,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="25dp"
-        android:layout_marginTop="23dp"
+        android:layout_marginTop="35dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent">
     </com.kyleduo.switchbutton.SwitchButton>
 

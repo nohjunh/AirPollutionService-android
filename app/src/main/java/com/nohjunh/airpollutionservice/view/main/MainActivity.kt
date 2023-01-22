@@ -8,8 +8,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.nohjunh.airpollutionservice.R
 import com.nohjunh.airpollutionservice.databinding.ActivityMainBinding
-import com.nohjunh.airpollutionservice.foreground.ForeGroundActivity
-import com.nohjunh.airpollutionservice.view.region.RegionActivity
+import com.nohjunh.airpollutionservice.foreground.view.ForeGroundActivity
 import timber.log.Timber
 
 class MainActivity : AppCompatActivity() {

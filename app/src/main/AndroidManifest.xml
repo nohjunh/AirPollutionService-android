@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
         android:name=".App"
@@ -17,7 +18,7 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".foreground.ForeGroundActivity"
+            android:name=".foreground.view.ForeGroundActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -51,6 +52,9 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
+        <service android:name=".foreground.service.ForeGroundService"/>
+
     </application>
 
 </manifest>
