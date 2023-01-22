@@ -20,7 +20,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="AirTeam"
+        android:text="AirInfo"
         android:textSize="20dp"
         android:textColor="@color/thirdColor"
         android:fontFamily="@font/gmarket_sans_ttf_medium"

@@ -43,7 +43,6 @@ class ForeGroundActivity : AppCompatActivity() {
             }
         }
 
-
         viewModel.flagToggleDataCheck()
 
         viewModel.flag.observe(this, Observer {
@@ -54,6 +53,11 @@ class ForeGroundActivity : AppCompatActivity() {
             }
         })
 
+
+        // 뒤로 가기
+        binding.backBtn.setOnClickListener {
+            onBackPressed()
+        }
 
     }
 
