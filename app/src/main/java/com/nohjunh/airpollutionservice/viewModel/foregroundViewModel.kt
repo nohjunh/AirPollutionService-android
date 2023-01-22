@@ -32,4 +32,8 @@ class foregroundViewModel : ViewModel() {
     fun flagSetToggleData() = viewModelScope.launch {
         ToggleDataStore().setFlagData()
     }
+
+    fun flagGetToggleData() = viewModelScope.launch {
+        _flag.value = ToggleDataStore().getFlagData()
+    }
 }

@@ -25,8 +25,10 @@ class ForeGroundActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-
-
+        // 처음 액티비티가 실행되었을 때 toggle state를 체크해주기 위함.
+        viewModel.flagGetToggleData()
+        
+        // LiveData 설정
         viewModel.flagToggleDataCheck()
         viewModel.flag.observe(this, Observer {
             if (it == true) { // toggle이 true 상태임을 유지할 수 있도록 함.
@@ -36,8 +38,8 @@ class ForeGroundActivity : AppCompatActivity() {
             }
         })
 
+        // 클릭 시 toggle State 변경
         binding.switchButton.setOnClickListener {
-            // toggle State 변경
             viewModel.flagSetToggleData()
         }
 
