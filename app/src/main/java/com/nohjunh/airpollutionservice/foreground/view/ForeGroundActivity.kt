@@ -26,6 +26,16 @@ class ForeGroundActivity : AppCompatActivity() {
         setContentView(view)
 
 
+
+        viewModel.flagToggleDataCheck()
+        viewModel.flag.observe(this, Observer {
+            if (it == true) { // toggle이 true 상태임을 유지할 수 있도록 함.
+                binding.switchButton.isChecked = true
+            } else { // toggle이 false 상태임을 유지할 수 있도록 함.
+                binding.switchButton.isChecked = false
+            }
+        })
+
         binding.switchButton.setOnClickListener {
             // toggle State 변경
             viewModel.flagSetToggleData()
@@ -42,17 +52,6 @@ class ForeGroundActivity : AppCompatActivity() {
                 startService(intent)
             }
         }
-
-        viewModel.flagToggleDataCheck()
-
-        viewModel.flag.observe(this, Observer {
-            if (it == true) { // toggle이 true 상태임을 유지할 수 있도록 함.
-                binding.switchButton.isChecked = true
-            } else { // toggle이 false 상태임을 유지할 수 있도록 함.
-                binding.switchButton.isChecked = false
-            }
-        })
-
 
         // 뒤로 가기
         binding.backBtn.setOnClickListener {
