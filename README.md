@@ -21,3 +21,24 @@
 - WorkManager
 - MotionToast : https://github.com/Spikeysanju/MotionToast
 - SwitchButton : https://github.com/kyleduo/SwitchButton
+
+# Main src
+```bash
+├── .idea
+├── app 
+│   └── src
+│        └── main.java.com.nohjunh.airpollutionservice
+│                                                  ├── adapter
+│                                                  ├── background
+│                                                  ├── dataStore
+│                                                  ├── database
+│                                                  ├── foreground
+│                                                  ├── model
+│                                                  ├── network
+│                                                  ├── repository
+│                                                  ├── view
+│                                                  ├── viewModel
+│                                                  └── App.kt
+└── gradle/wrapper
+
+``` 
