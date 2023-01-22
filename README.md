@@ -20,3 +20,4 @@
 - ViewPager2
 - WorkManager
 - MotionToast : https://github.com/Spikeysanju/MotionToast
+- SwitchButton : https://github.com/kyleduo/SwitchButton
