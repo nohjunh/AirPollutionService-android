@@ -45,7 +45,8 @@ An application that enables you to view the latest air pollution information abo
 ``` 
 
 # API
--한국환경공단_에어코리아_대기오염정보 일반 인증키(Decoding)
+한국환경공단_에어코리아_대기오염정보 일반 인증키(Decoding)
+
 Add the key to local.properties file on the project.
 APIKEY_AirPollution = "~~~~~"
 
