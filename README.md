@@ -42,3 +42,12 @@
 └── gradle/wrapper
 
 ``` 
+
+# View
+![1번](https://user-images.githubusercontent.com/75293768/214249998-1a1c6328-cabe-4675-b3ae-f4a714728db1.gif)
+![2번](https://user-images.githubusercontent.com/75293768/214250005-15d07872-1ac5-429d-8dfe-f4d89a7b912b.gif)
+![3번](https://user-images.githubusercontent.com/75293768/214250016-41a7c26e-0ca2-48fb-9a77-234159bc8ddf.gif)
+
+![4번](https://user-images.githubusercontent.com/75293768/214250024-7c321429-6f36-4b0a-88f7-32fe123cdb39.gif)
+![5번](https://user-images.githubusercontent.com/75293768/214250030-bfc650d1-6ebf-45d6-94da-45942b5ebad1.gif)
+![6번](https://user-images.githubusercontent.com/75293768/214250048-d03df135-0eae-4865-acca-301f6f602180.gif)
